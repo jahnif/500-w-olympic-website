@@ -1,0 +1,32 @@
+title: "500 W OLYMPIC PL"
+subtitle: "A Co-op Housing Community in Queen Anne, Seattle"
+hero_image: "/public/hero.jpg"
+
+links:
+  documents: "https://drive.google.com/open?id=0B16vN4-g9mQfVHk3MTBmUmRTTjJLR3lZcXVlRlZpQQ"
+  issue_tracker: "https://trello.com/b/2ARWaFKF"
+
+administration:
+  board_email: "board@500wolympic.org"
+  board_meeting: "Board meetings are the 2nd Monday each month @ 7pm in the community room"
+  property_manager_email: "ryan@3stripemgmt.com"
+
+residents:
+  all_residents_email: "residents@500wolympic.org"
+  roster_url: "https://docs.google.com/spreadsheets/d/1w79B4zgv7LrWf6y5o6lbS1ZffNVLMuys9ezJuPkLisw/edit?usp=sharing"
+
+stacks:
+  description: "Email stacks of apartments that sit on top of another, good for notifying neighbors of water shutoffs, etc. Stack 1 corresponds to units ending in \"1,\" stack 2 for units ending in \"2,\" and so on."
+  emails:
+    - label: "Email Stack 1"
+      email: "stack1@500wolympic.org"
+    - label: "Email Stack 2"
+      email: "stack2@500wolympic.org"
+    - label: "Email Stack 3"
+      email: "stack3@500wolympic.org"
+    - label: "Email Stack 4"
+      email: "stack4@500wolympic.org"
+    - label: "Email Stack 5"
+      email: "stack5@500wolympic.org"
+    - label: "Email Stack 6"
+      email: "stack6@500wolympic.org"

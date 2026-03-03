@@ -1,0 +1,15 @@
+{
+  "name": "500-w-olympic-website",
+  "version": "1.0.0",
+  "description": "500 W Olympic Pl – Co-op Housing Community in Queen Anne, Seattle",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.1"
+  }
+}

@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Required for Decap CMS identity/auth proxy
+[[redirects]]
+  from = "/api/auth"
+  to = "/.netlify/identity/token"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"

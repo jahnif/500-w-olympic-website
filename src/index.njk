@@ -1,0 +1,60 @@
+---
+layout: base.njk
+---
+
+<section class="hero" style="background-image: url('{{ site.hero_image }}')">
+  <div class="hero-content">
+    <h1>{{ site.title }}<span class="orange-dot">.</span></h1>
+    <p>{{ site.subtitle }}</p>
+    <div class="hero-buttons">
+      <a href="{{ site.links.documents }}" class="btn btn-outline">Resident Documents</a>
+      <a href="{{ site.links.issue_tracker }}" class="btn btn-orange">Issue Tracker</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <h2>Contact</h2>
+  <div class="columns">
+
+    <div>
+      <div class="column-title">Administration</div>
+
+      <div class="contact-group">
+        <h3>Board</h3>
+        <a href="mailto:{{ site.administration.board_email }}">Email the Board</a>
+        <p class="note">{{ site.administration.board_meeting }}</p>
+      </div>
+
+      <div class="contact-group">
+        <h3>Property Management</h3>
+        <a href="mailto:{{ site.administration.property_manager_email }}">Email the Property Manager</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="column-title">Residents</div>
+
+      <div class="contact-group">
+        <h3>All Residents</h3>
+        <a href="mailto:{{ site.residents.all_residents_email }}">Email All Residents</a>
+      </div>
+
+      <div class="contact-group">
+        <h3>View Member Roster &amp; Contact Info</h3>
+        <a href="{{ site.residents.roster_url }}">View Resident Roster</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="column-title">Stacks</div>
+      <p class="stacks-description">{{ site.stacks.description }}</p>
+      <div class="stack-links">
+        {% for stack in site.stacks.emails %}
+          <a href="mailto:{{ stack.email }}">{{ stack.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>

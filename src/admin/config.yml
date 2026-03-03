@@ -1,0 +1,90 @@
+# Decap CMS Configuration
+# Uses Netlify Identity for authentication (free, invite-only)
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images are saved in the repo
+media_folder: "src/public"
+# URL prefix used when referencing uploaded images in templates
+public_folder: "/public"
+
+collections:
+  - name: settings
+    label: "Site Settings"
+    files:
+      - file: "src/_data/site.yaml"
+        label: "Site Content"
+        name: site
+        fields:
+          - label: "Page Title"
+            name: title
+            widget: string
+            hint: "Shown in the hero. The orange period is added automatically."
+
+          - label: "Subtitle"
+            name: subtitle
+            widget: string
+            hint: "Shown below the title in the hero."
+
+          - label: "Hero Background Image"
+            name: hero_image
+            widget: image
+            hint: "The building photo shown in the hero section."
+
+          - label: "Links"
+            name: links
+            widget: object
+            fields:
+              - label: "Resident Documents URL"
+                name: documents
+                widget: string
+              - label: "Issue Tracker URL"
+                name: issue_tracker
+                widget: string
+
+          - label: "Administration"
+            name: administration
+            widget: object
+            fields:
+              - label: "Board Email"
+                name: board_email
+                widget: string
+              - label: "Board Meeting Info"
+                name: board_meeting
+                widget: string
+                hint: "Shown below the Board email link."
+              - label: "Property Manager Email"
+                name: property_manager_email
+                widget: string
+
+          - label: "Residents"
+            name: residents
+            widget: object
+            fields:
+              - label: "All Residents Email"
+                name: all_residents_email
+                widget: string
+              - label: "Resident Roster URL"
+                name: roster_url
+                widget: string
+
+          - label: "Stacks"
+            name: stacks
+            widget: object
+            fields:
+              - label: "Stacks Description"
+                name: description
+                widget: text
+                hint: "Explanation of what stacks are, shown above the email links."
+              - label: "Stack Email Links"
+                name: emails
+                widget: list
+                fields:
+                  - label: "Display Label"
+                    name: label
+                    widget: string
+                    hint: 'e.g. "Email Stack 1"'
+                  - label: "Email Address"
+                    name: email
+                    widget: string

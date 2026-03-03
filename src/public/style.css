@@ -1,0 +1,194 @@
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  color: #222;
+  background: #fff;
+}
+
+a {
+  color: #4a8fbf;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  min-height: 58vh;
+  background-color: #082c44;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 40, 68, 0.80);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.orange-dot {
+  color: #e8a020;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.01em;
+}
+
+/* ---- Buttons ---- */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2.25rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.btn-outline {
+  color: #fff;
+  border-color: #fff;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #082c44;
+  text-decoration: none;
+}
+
+.btn-orange {
+  color: #fff;
+  border-color: #e8a020;
+  background: #e8a020;
+}
+
+.btn-orange:hover {
+  background: #c98910;
+  border-color: #c98910;
+  text-decoration: none;
+}
+
+/* ---- Contact Section ---- */
+.contact-section {
+  padding: 5rem 2rem 5rem;
+  text-align: center;
+}
+
+.contact-section > h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  color: #111;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: start;
+  text-align: center;
+}
+
+.column-title {
+font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #e8a020;
+  margin-bottom: 2rem;
+}
+
+.contact-group {
+  margin-bottom: 2rem;
+}
+
+.contact-group h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.contact-group .note {
+  font-size: 0.88rem;
+  color: #777;
+  margin-top: 0.5rem;
+  line-height: 1.55;
+}
+
+.stacks-description {
+  font-size: 0.88rem;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.stack-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 680px) {
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
